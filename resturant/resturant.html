@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-color: #f16666;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+            transform: scale(1.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: scale(1.00);
+        }
+        .menu-item img {
+            width: 200px;
+            height: 200px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: static;
+            width: 100%;
+            bottom: 0;
+        }
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #66caf1;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        #topBtn:hover {
+            background-color: #555;
+            transform: scale(1.1);
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Indian Restaurant</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu" class="flashy">Menu</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container" id="home">
+        <h2>Home</h2>
+        <p><font face="times new roman" size="20" color="#3fbaeb">Welcome to our Indian Restaurant. We serve the best Indian cuisine in town.</font></p>
+    </div>
+    <div class="container" id="menu">
+        <h2>Menu</h2>
+        <div class="menu-item">
+            <h3>Chicken Curry</h3>
+            <img src="https://th.bing.com/th/id/OIP.LtiB-CLCQ8olQvEIg8xVYgHaHa?w=176&h=180&c=7&r=0&o=5&pid=1.7" alt="Chicken Curry">
+            <p>A delicious chicken curry made with a blend of spices.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Paneer Tikka</h3>
+            <img src="download.jpeg" alt="Paneer Tikka">
+            <p>Grilled paneer cubes marinated in spices.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Butter Naan</h3>
+            <img src="https://th.bing.com/th/id/OIP.rERR_w3Bir6f5aTRYUfkLgHaE8?w=222&h=180&c=7&r=0&o=5&pid=1.7" alt="Butter Naan">
+            <p>Soft and fluffy naan bread with a buttery finish.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Biryani</h3>
+            <img src="biriyani.jpeg" alt="Biryani">
+            <p>Fragrant rice cooked with spices and meat or vegetables.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Masala Dosa</h3>
+            <img src="masama dosa.jpeg" alt="Masala Dosa">
+            <p>Thin crispy crepe filled with spicy potato filling.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Gulab Jamun</h3>
+            <img src="gulab jamun.jpeg" alt="Gulab Jamun">
+            <p>Sweet deep-fried dough balls soaked in sugar syrup.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Rogan Josh</h3>
+            <img src="rogan.jpeg" alt="Rogan Josh">
+            <p>Aromatic lamb curry with a rich, flavorful sauce.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Chole Bhature</h3>
+            <img src="chole.jpeg" alt="Chole Bhature">
+            <p>Spicy chickpeas served with deep-fried bread.</p>
+        </div>
+        <div class="menu-item">
+            <h3>Ras Malai</h3>
+            <img src="ros malai.jpeg" alt="Ras Malai">
+            <p>Soft cheese dumplings soaked in sweetened milk.</p>
+        </div>
+    </div>
+    <div class="container" id="about">
+        <h2>About Us</h2>
+        <p>We are a family-owned restaurant serving authentic Indian cuisine for over 20 years.</p>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact</h2>
+        <p>Email: info@indianrestaurant.com</p>
+        <p>Phone: +91 9073020128</p>
+    </div>
+    <footer>
+        <p>&copy; 2023 Indian Restaurant. All rights reserved.</p>
+    </footer>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+    <script>
+       
+        var mybutton = document.getElementById("topBtn");
+
+        
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
